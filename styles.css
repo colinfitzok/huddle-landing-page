@@ -1,0 +1,164 @@
+:root {
+    --violet: hsl(257, 40%, 49%);
+    --soft-magenta: hsl(300, 69%, 71%);    
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    background-color: var(--violet);
+    background-image: url("images/bg-mobile.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.images {
+    display: flex;
+    flex-direction: column;
+}
+
+.logo {
+    width: 33%;
+    margin: 10% 10% 18% 10%;
+}
+
+.mockups {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.intro {
+    width: 80%;
+    max-width: 30rem;
+    margin: 0 auto;
+    color: white;
+    font-family: "Poppins", sans-serif;
+}
+
+.intro h1 {
+    font-size: 1.5rem;
+    margin: 4rem auto 1rem auto;
+}
+
+.intro p {
+    font-size: 0.95rem;
+}
+
+.register-button {
+    color: var(--violet);
+    background-color: white;
+    font-family: "Poppins", sans-serif;
+    font-size: 0.75rem;
+    margin: 1.5rem 0;
+    padding: 1em 7em;
+    border-radius: 10rem;
+    border: 0;
+    filter: drop-shadow(0 0.25rem 0.25rem rgba(31, 31, 31, 50%))
+}
+
+.register-button:hover,
+.register-button:focus {
+    color: white;
+    background-color: var(--soft-magenta);
+    cursor: pointer;
+}
+
+.icons {
+    max-width: 100px;
+    margin: 2rem auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.icons i {
+    font-size: 0.9rem;
+    color: white;
+    padding: 6px;
+    border: 1px solid white;
+    border-radius: 100px;
+}
+
+.icons i:hover,
+.icons i:focus {
+    color: var(--soft-magenta);
+    border-color: var(--soft-magenta);
+}
+
+.attribution {
+    font-family: "Poppins", sans-serif;
+    font-size: 0.5rem; 
+    text-align: center;
+    color: rgb(207, 207, 207);
+}
+
+.attribution a {
+    color: hsl(32, 83%, 60%);
+}
+
+@media (min-width: 700px) {
+    body {
+        background-image: url("images/bg-desktop.svg");
+        background-size: cover;
+    }
+
+    .container {
+        margin: 0 auto;
+        flex-direction: row;
+        max-width: 1500px;
+    }
+
+    .images {
+        margin-right: 0;
+        width: 58%;
+    }
+
+    .logo {
+        width: 25%;
+        margin: 8% 5% 10% 10%;
+    }
+
+    .intro {
+        width: 36%;
+        align-self: center;
+        margin: 4rem 2rem 0 0;
+        text-align: left;
+    }
+
+    .intro h1 {
+        font-size: 2.4rem;
+    }
+    
+    .intro p {
+        font-size: 1rem;
+    }
+
+    .register-button {
+        font-size: 1rem;
+        padding: 1em 4em;
+    }
+
+    .icons {
+        width: 50%;
+        max-width: 150px;
+        margin-right: 5%;
+        align-self: flex-end;
+    }
+
+    .icons i {
+        font-size: 1.125rem;
+        margin: 0 0.5rem;
+        padding: 0.625rem;
+        border: 2px solid white;
+    }
+}
